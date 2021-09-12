@@ -12,8 +12,12 @@ const app = express();
 // enable CORS
 app.use(cors());
 
+app.get('/', (request, response) => {
+  response.send('Home page');
+})
 
 
+// start server
 app.listen(PORT, () => {
   console.log(`Server is started on ${PORT}`);
 });
